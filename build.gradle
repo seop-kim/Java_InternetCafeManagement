@@ -15,6 +15,12 @@ dependencies {
             'org.assertj:assertj-core:3.23.1',
             'org.junit.jupiter:junit-jupiter-api:5.9.0'
     )
+
+    // lombok
+    compileOnly 'org.projectlombok:lombok:1.18.24'
+    annotationProcessor 'org.projectlombok:lombok:1.18.24'
+    testCompileOnly 'org.projectlombok:lombok:1.18.24'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.24'
 }
 
 test {

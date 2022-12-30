@@ -13,4 +13,8 @@ public class Member {
     LocalDateTime regiDate;
     LocalDateTime lastUseDate;
     Gender gender;
+
+    public Member() {
+        regiDate = LocalDateTime.now();
+    }
 }

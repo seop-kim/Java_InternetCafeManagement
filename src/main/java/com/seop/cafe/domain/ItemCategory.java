@@ -10,7 +10,7 @@ public enum ItemCategory {
         this.category = category;
     }
 
-    public String getCategory(ItemCategory category) {
+    public String getCategory() {
         return this.category;
     }
 }

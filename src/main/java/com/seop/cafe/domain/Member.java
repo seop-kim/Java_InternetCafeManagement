@@ -12,5 +12,5 @@ public class Member {
     int age;
     LocalDateTime regiDate;
     LocalDateTime lastUseDate;
-    String gender;
+    Gender gender;
 }

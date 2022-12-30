@@ -8,7 +8,7 @@ import lombok.Setter;
 public class Item {
     Long no;
     String name;
-    Category category;
+    ItemCategory category;
     int price;
     int stock;
 

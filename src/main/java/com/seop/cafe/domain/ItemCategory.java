@@ -1,16 +1,16 @@
 package com.seop.cafe.domain;
 
-public enum Category {
+public enum ItemCategory {
     SNACK("과자"),
     DRINK("음료"),
     RAMEN("라면");
 
     private final String category;
-    Category(String category) {
+    ItemCategory(String category) {
         this.category = category;
     }
 
-    public String getCategory(Category category) {
+    public String getCategory(ItemCategory category) {
         return this.category;
     }
 }

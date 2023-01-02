@@ -4,8 +4,6 @@ import com.seop.cafe.adapter.ControllerV3Adapter;
 import com.seop.cafe.adapter.ControllerV4Adapter;
 import com.seop.cafe.adapter.MemberAdapter;
 import com.seop.cafe.controller.detail.MainControllable;
-import com.seop.cafe.controller.detail.member.MemberControllableV2;
-import com.seop.cafe.controller.detail.member.MemberControllableV3;
 import com.seop.cafe.controller.detail.member.MemberDeleteController;
 import com.seop.cafe.controller.detail.member.MemberEndController;
 import com.seop.cafe.controller.detail.member.MemberNameSearchController;

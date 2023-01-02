@@ -8,14 +8,16 @@ import java.util.Map;
 
 public class MemberNameSearchController implements MemberControllableMap {
     private final MemberService service = MemberService.getInstance();
+    private static final String MEMBER_REQUEST_SEARCH_USER_NAME = "이름을 검색해 주세요 : ";
+    private static final String PATH = "searchNameMembers";
 
     @Override
     public String process(Map<String, Object> model) {
-        System.out.print("이름을 검색해 주세요 : ");
+        System.out.print(MEMBER_REQUEST_SEARCH_USER_NAME);
         String name = InputView.read();
         List<Member> members = service.findName(name);
         model.put("members", members);
-        return "searchNameMembers";
+        return PATH;
     }
 }
 

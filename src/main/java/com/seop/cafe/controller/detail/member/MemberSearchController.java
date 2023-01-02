@@ -7,11 +7,12 @@ import java.util.Map;
 
 public class MemberSearchController implements MemberControllableMap {
     private final MemberService service = MemberService.getInstance();
+    private static final String PATH = "searchMembers";
 
     @Override
     public String process(Map<String, Object> model) {
         List<Member> members = service.findAll();
         model.put("members", members);
-        return "searchMembers";
+        return PATH;
     }
 }

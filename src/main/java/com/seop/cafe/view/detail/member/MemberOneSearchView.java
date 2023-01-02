@@ -7,7 +7,6 @@ import java.util.Map;
 public class MemberOneSearchView implements Viewable {
     @Override
     public void render(Map<String, Object> model) {
-        System.out.println("MemberOneSearchView - render");
         Member member = (Member) model.get("member");
         System.out.println(member);
     }

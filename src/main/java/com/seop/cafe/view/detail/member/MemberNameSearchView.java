@@ -9,7 +9,6 @@ import java.util.Map;
 public class MemberNameSearchView implements Viewable {
     @Override
     public void render(Map<String, Object> model) {
-        System.out.println("MemberNameSearchView - render");
         List<Member> members = (List<Member>) model.get("members");
         members.forEach(System.out::println);
     }

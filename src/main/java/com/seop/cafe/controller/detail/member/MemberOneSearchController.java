@@ -7,13 +7,15 @@ import java.util.Map;
 
 public class MemberOneSearchController implements MemberControllableMap {
     private final MemberService service = MemberService.getInstance();
+    private static final String MEMBER_REQUEST_SEARCH_USER_NO = "회원의 No을 입력해 주세요 : ";
+    private static final String PATH = "searchMember";
 
     @Override
     public String process(Map<String, Object> model) {
-        System.out.print("회원의 No을 입력해 주세요 : ");
+        System.out.print(MEMBER_REQUEST_SEARCH_USER_NO);
         String read = InputView.read();
         Member findMember = service.findNOne(Long.parseLong(read));
         model.put("member", findMember);
-        return "searchMember";
+        return PATH;
     }
 }

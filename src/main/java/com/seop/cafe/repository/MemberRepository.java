@@ -36,7 +36,7 @@ public class MemberRepository {
     public List<Member> findName(String name) {
         List<Member> findMembers = new ArrayList<>();
         for (Member member : members.values()) {
-            if (member.getName().equals(name)) {
+            if (member.getName().contains(name)) {
                 findMembers.add(member);
             }
         }

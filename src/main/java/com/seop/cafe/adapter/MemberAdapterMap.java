@@ -5,7 +5,7 @@ import com.seop.cafe.view.detail.member.MemberViewModel;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ControllerV3Adapter implements MemberAdapter {
+public class MemberAdapterMap implements MemberAdapter {
     @Override
     public boolean isSupport(Object controller) {
         return controller instanceof MemberControllableMap;

@@ -33,7 +33,7 @@ public class MemberValidator {
     }
 
     private void ageValidate() {
-        if (member.getAge() < MEMBER_AGE_MIN_VALUE || member.getAge() < MEMBER_AGE_MAX_VALUE) {
+        if (!(member.getAge() < MEMBER_AGE_MIN_VALUE || member.getAge() < MEMBER_AGE_MAX_VALUE)) {
             throw new IllegalArgumentException("가입이 불가능한 나이입니다.");
         }
     }

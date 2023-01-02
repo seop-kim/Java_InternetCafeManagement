@@ -6,8 +6,8 @@ import com.seop.cafe.util.MemberValidator;
 import java.util.List;
 
 public class MemberService {
-    MemberRepository repository = MemberRepository.getInstance();
-    MemberValidator validator = new MemberValidator();
+    private final MemberRepository repository = MemberRepository.getInstance();
+    private final MemberValidator validator = new MemberValidator();
     private static final MemberService instance = new MemberService();
 
     public static MemberService getInstance() {

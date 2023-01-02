@@ -2,7 +2,7 @@ package com.seop.cafe;
 
 import com.seop.cafe.domain.Gender;
 import com.seop.cafe.domain.Member;
-import com.seop.cafe.domain.service.MemberService;
+import com.seop.cafe.service.MemberService;
 
 public class MemberTestData {
     private final static MemberService service = new MemberService();

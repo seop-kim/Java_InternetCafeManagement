@@ -1,4 +1,4 @@
-package com.seop.cafe.view;
+package com.seop.cafe.adapter.view;
 
 import java.util.Scanner;
 

@@ -1,7 +1,7 @@
 package com.seop.cafe.controller.detail.member;
 
-import com.seop.cafe.domain.service.MemberService;
-import com.seop.cafe.view.InputView;
+import com.seop.cafe.service.MemberService;
+import com.seop.cafe.adapter.view.InputView;
 
 public class MemberDeleteController implements MemberControllableString {
     private final MemberService service = MemberService.getInstance();

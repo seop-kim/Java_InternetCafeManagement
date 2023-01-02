@@ -1,4 +1,4 @@
-package com.seop.cafe.domain.service;
+package com.seop.cafe.service;
 
 import com.seop.cafe.domain.Member;
 import com.seop.cafe.repository.MemberRepository;

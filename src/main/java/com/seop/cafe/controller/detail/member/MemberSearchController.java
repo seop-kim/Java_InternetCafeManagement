@@ -1,7 +1,7 @@
 package com.seop.cafe.controller.detail.member;
 
 import com.seop.cafe.domain.Member;
-import com.seop.cafe.domain.service.MemberService;
+import com.seop.cafe.service.MemberService;
 import java.util.List;
 import java.util.Map;
 

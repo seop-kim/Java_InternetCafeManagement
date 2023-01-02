@@ -1,8 +1,7 @@
-package com.seop.cafe.view.detail.member;
+package com.seop.cafe.adapter.view.detail.member;
 
+import com.seop.cafe.adapter.view.Viewable;
 import com.seop.cafe.domain.Member;
-import com.seop.cafe.view.Viewable;
-import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 

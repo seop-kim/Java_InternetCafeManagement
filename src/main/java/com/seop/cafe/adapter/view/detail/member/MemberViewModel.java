@@ -1,6 +1,6 @@
-package com.seop.cafe.view.detail.member;
+package com.seop.cafe.adapter.view.detail.member;
 
-import com.seop.cafe.view.Viewable;
+import com.seop.cafe.adapter.view.Viewable;
 import java.util.HashMap;
 import java.util.Map;
 

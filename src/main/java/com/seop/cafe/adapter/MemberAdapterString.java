@@ -1,7 +1,7 @@
 package com.seop.cafe.adapter;
 
 import com.seop.cafe.controller.detail.member.MemberControllableString;
-import com.seop.cafe.view.detail.member.MemberViewModel;
+import com.seop.cafe.adapter.view.detail.member.MemberViewModel;
 
 public class MemberAdapterString implements MemberAdapter {
     @Override

@@ -14,6 +14,9 @@ public class MemberService {
         return instance;
     }
 
+    private MemberService() {
+    }
+
     public Member register(Member member) {
         validator.registerValidate(member);
         return repository.save(member);

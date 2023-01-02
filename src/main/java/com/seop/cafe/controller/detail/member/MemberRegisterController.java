@@ -7,7 +7,7 @@ import com.seop.cafe.adapter.view.InputView;
 import java.util.Map;
 
 public class MemberRegisterController implements MemberControllableMap {
-    private final MemberService service = MemberService.getInstance();
+    private final MemberService service = new MemberService();
     private static final String PATH = "regi";
     private static final String MEMBER_REQUEST_REGI_USER_NAME = "이름을 입력해 주세요 : ";
     private static final String MEMBER_REQUEST_REGI_USER_AGE = "나이를 입력해 주세요 : ";

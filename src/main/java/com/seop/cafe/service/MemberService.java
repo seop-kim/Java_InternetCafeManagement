@@ -8,14 +8,6 @@ import java.util.List;
 public class MemberService {
     private final MemberRepository repository = MemberRepository.getInstance();
     private final MemberValidator validator = new MemberValidator();
-    private static final MemberService instance = new MemberService();
-
-    public static MemberService getInstance() {
-        return instance;
-    }
-
-    private MemberService() {
-    }
 
     public Member register(Member member) {
         validator.registerValidate(member);

@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 public class MemberSearchController implements MemberControllableMap {
-    private final MemberService service = MemberService.getInstance();
+    private final MemberService service = new MemberService();
     private static final String PATH = "searchMembers";
 
     @Override

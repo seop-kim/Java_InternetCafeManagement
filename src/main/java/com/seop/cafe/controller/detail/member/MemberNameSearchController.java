@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 public class MemberNameSearchController implements MemberControllableMap {
-    private final MemberService service = MemberService.getInstance();
+    private final MemberService service = new MemberService();
     private static final String MEMBER_REQUEST_SEARCH_USER_NAME = "이름을 검색해 주세요 : ";
     private static final String PATH = "searchNameMembers";
 

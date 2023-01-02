@@ -1,4 +1,4 @@
-package com.seop.cafe.adapter.view;
+package com.seop.cafe.view;
 
 import java.util.Map;
 

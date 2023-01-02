@@ -3,7 +3,7 @@ package com.seop.cafe.controller.detail.member;
 import com.seop.cafe.domain.Gender;
 import com.seop.cafe.domain.Member;
 import com.seop.cafe.service.MemberService;
-import com.seop.cafe.adapter.view.InputView;
+import com.seop.cafe.view.InputView;
 import java.util.Map;
 
 public class MemberRegisterController implements MemberControllableMap {

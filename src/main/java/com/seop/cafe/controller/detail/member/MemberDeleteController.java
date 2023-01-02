@@ -1,6 +1,6 @@
 package com.seop.cafe.controller.detail.member;
 
-import com.seop.cafe.adapter.view.InputView;
+import com.seop.cafe.view.InputView;
 import com.seop.cafe.service.MemberService;
 
 public class MemberDeleteController implements MemberControllableString {

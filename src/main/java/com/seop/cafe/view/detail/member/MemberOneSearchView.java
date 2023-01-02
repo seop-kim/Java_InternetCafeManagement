@@ -1,7 +1,7 @@
-package com.seop.cafe.adapter.view.detail.member;
+package com.seop.cafe.view.detail.member;
 
 import com.seop.cafe.domain.Member;
-import com.seop.cafe.adapter.view.Viewable;
+import com.seop.cafe.view.Viewable;
 import java.util.Map;
 
 public class MemberOneSearchView implements Viewable {

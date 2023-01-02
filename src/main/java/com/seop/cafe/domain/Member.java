@@ -17,4 +17,16 @@ public class Member {
     public Member() {
         regiDate = LocalDateTime.now();
     }
+
+    @Override
+    public String toString() {
+        return "Member{" +
+                "no=" + no +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", regiDate=" + regiDate +
+                ", lastUseDate=" + lastUseDate +
+                ", gender=" + gender +
+                '}';
+    }
 }

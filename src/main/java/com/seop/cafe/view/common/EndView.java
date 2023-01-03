@@ -1,9 +1,9 @@
-package com.seop.cafe.view.member;
+package com.seop.cafe.view.common;
 
 import com.seop.cafe.view.Viewable;
 import java.util.Map;
 
-public class MemberEndView implements Viewable {
+public class EndView implements Viewable {
     private static final String MEMBER_FUNCTION_END_MSG = "이전 단계로 이동합니다.";
 
     @Override

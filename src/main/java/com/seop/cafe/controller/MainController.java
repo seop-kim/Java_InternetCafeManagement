@@ -1,6 +1,6 @@
 package com.seop.cafe.controller;
 
-import com.seop.cafe.controller.detail.MainControllable;
+import com.seop.cafe.controller.member.MemberController;
 import com.seop.cafe.view.InputView;
 import java.util.HashMap;
 import java.util.Map;

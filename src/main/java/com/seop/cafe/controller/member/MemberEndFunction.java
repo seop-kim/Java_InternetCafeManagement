@@ -1,6 +1,6 @@
-package com.seop.cafe.controller.detail.member;
+package com.seop.cafe.controller.member;
 
-public class MemberEndController implements MemberControllableString {
+public class MemberEndFunction implements IFMemberFunctionPath {
     private static final String PATH = "end";
     @Override
     public String process() {

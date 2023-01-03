@@ -1,17 +1,11 @@
-package com.seop.cafe.controller;
+package com.seop.cafe.controller.member;
 
 import com.seop.cafe.adapter.MemberAdapterMap;
 import com.seop.cafe.adapter.MemberAdapterString;
 import com.seop.cafe.adapter.MemberAdapter;
-import com.seop.cafe.controller.detail.MainControllable;
-import com.seop.cafe.controller.detail.member.MemberDeleteController;
-import com.seop.cafe.controller.detail.member.MemberEndController;
-import com.seop.cafe.controller.detail.member.MemberNameSearchController;
-import com.seop.cafe.controller.detail.member.MemberOneSearchController;
-import com.seop.cafe.controller.detail.member.MemberRegisterController;
-import com.seop.cafe.controller.detail.member.MemberSearchController;
+import com.seop.cafe.controller.MainControllable;
 import com.seop.cafe.view.InputView;
-import com.seop.cafe.view.detail.member.MemberViewModel;
+import com.seop.cafe.view.member.MemberViewModel;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -31,12 +25,12 @@ public class MemberController implements MainControllable {
     }
 
     private void initController() {
-        controllers.put("1", new MemberRegisterController());
-        controllers.put("2", new MemberSearchController());
-        controllers.put("3", new MemberNameSearchController());
-        controllers.put("4", new MemberOneSearchController());
-        controllers.put("5", new MemberDeleteController());
-        controllers.put(END, new MemberEndController());
+        controllers.put("1", new MemberRegisterFunction());
+        controllers.put("2", new MemberSearchFunction());
+        controllers.put("3", new MemberNameSearchFunction());
+        controllers.put("4", new MemberOneSearchFunction());
+        controllers.put("5", new MemberDeleteFunction());
+        controllers.put(END, new MemberEndFunction());
     }
 
     private void initAdapter() {

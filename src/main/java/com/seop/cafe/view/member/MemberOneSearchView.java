@@ -1,4 +1,4 @@
-package com.seop.cafe.view.detail.member;
+package com.seop.cafe.view.member;
 
 import com.seop.cafe.domain.Member;
 import com.seop.cafe.view.Viewable;

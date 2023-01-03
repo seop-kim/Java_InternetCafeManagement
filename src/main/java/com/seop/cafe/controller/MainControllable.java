@@ -1,4 +1,4 @@
-package com.seop.cafe.controller.detail;
+package com.seop.cafe.controller;
 
 @FunctionalInterface
 public interface MainControllable {

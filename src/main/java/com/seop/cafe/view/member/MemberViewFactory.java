@@ -1,4 +1,4 @@
-package com.seop.cafe.view.detail.member;
+package com.seop.cafe.view.member;
 
 import com.seop.cafe.view.Viewable;
 import java.util.HashMap;
@@ -24,5 +24,4 @@ public class MemberViewFactory {
     public Viewable get(String viewPath) {
         return views.get(viewPath);
     }
-
 }

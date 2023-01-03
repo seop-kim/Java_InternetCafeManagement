@@ -1,11 +1,11 @@
-package com.seop.cafe.controller.detail.member;
+package com.seop.cafe.controller.member;
 
 import com.seop.cafe.domain.Member;
 import com.seop.cafe.service.MemberService;
 import java.util.List;
 import java.util.Map;
 
-public class MemberSearchController implements MemberControllableMap {
+public class MemberSearchFunction implements IFMemberFunctionModel {
     private final MemberService service = new MemberService();
     private static final String PATH = "searchMembers";
 

@@ -1,8 +1,8 @@
-package com.seop.cafe.controller.detail.member;
+package com.seop.cafe.controller.member;
 
 import java.util.Map;
 
 @FunctionalInterface
-public interface MemberControllableMap {
+public interface IFMemberFunctionModel {
     String process(Map<String, Object> model);
 }

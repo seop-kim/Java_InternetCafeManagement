@@ -1,11 +1,11 @@
-package com.seop.cafe.controller.detail.member;
+package com.seop.cafe.controller.member;
 
 import com.seop.cafe.domain.Member;
 import com.seop.cafe.service.MemberService;
 import com.seop.cafe.view.InputView;
 import java.util.Map;
 
-public class MemberOneSearchController implements MemberControllableMap {
+public class MemberOneSearchFunction implements IFMemberFunctionModel {
     private final MemberService service = new MemberService();
     private static final String MEMBER_REQUEST_SEARCH_USER_NO = "회원의 No을 입력해 주세요 : ";
     private static final String PATH = "searchMember";

@@ -40,13 +40,14 @@ public class ItemRepository {
         return findItems;
     }
 
-    public Item findName(String name) {
+    public List<Item> findName(String name) {
+        List<Item> findItems = new ArrayList<>();
         for (Item item : items.values()) {
-            if (item.getName().equals(name)) {
-                return item;
+            if (item.getName().contains(name)) {
+                findItems.add(item);
             }
         }
-        return null;
+        return findItems;
     }
 
     public List<Item> findAll() {

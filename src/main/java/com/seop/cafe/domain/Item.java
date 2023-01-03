@@ -37,4 +37,15 @@ public class Item {
             throw new IllegalArgumentException("현재 재고를 초과한 수량을 내보낼 수 없습니다.");
         }
     }
+
+    @Override
+    public String toString() {
+        return "Item{" +
+                "no=" + no +
+                ", name='" + name + '\'' +
+                ", category=" + category +
+                ", price=" + price +
+                ", stock=" + stock +
+                '}';
+    }
 }

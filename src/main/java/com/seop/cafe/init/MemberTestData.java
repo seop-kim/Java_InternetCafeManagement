@@ -1,4 +1,4 @@
-package com.seop.cafe;
+package com.seop.cafe.init;
 
 import com.seop.cafe.domain.Gender;
 import com.seop.cafe.domain.Member;

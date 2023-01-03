@@ -1,4 +1,4 @@
-package com.seop.cafe.controller.member;
+package com.seop.cafe.function.member;
 
 import com.seop.cafe.controller.common.IFunctionPath;
 import com.seop.cafe.view.common.InputView;

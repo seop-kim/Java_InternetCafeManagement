@@ -1,4 +1,4 @@
-package com.seop.cafe.controller.item;
+package com.seop.cafe.function.item;
 
 import com.seop.cafe.controller.common.IFunctionModel;
 import java.util.Map;

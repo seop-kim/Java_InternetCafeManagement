@@ -1,4 +1,4 @@
-package com.seop.cafe.controller.member;
+package com.seop.cafe.function.member;
 
 import com.seop.cafe.controller.common.IFunctionModel;
 import com.seop.cafe.domain.Member;

@@ -1,4 +1,5 @@
 # ToyProject - PC방 관리
+- MVC 학습
 
 ## :mag_right: 진행 방식
 

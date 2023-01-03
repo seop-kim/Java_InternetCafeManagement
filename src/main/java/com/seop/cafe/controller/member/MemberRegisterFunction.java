@@ -1,20 +1,18 @@
 package com.seop.cafe.controller.member;
 
+import com.seop.cafe.controller.common.IFunctionModel;
 import com.seop.cafe.domain.Gender;
 import com.seop.cafe.domain.Member;
 import com.seop.cafe.service.MemberService;
-import com.seop.cafe.view.InputView;
+import com.seop.cafe.view.common.InputView;
 import java.util.Map;
 
-public class MemberRegisterFunction implements IFMemberFunctionModel {
+public class MemberRegisterFunction implements IFunctionModel {
     private final MemberService service = new MemberService();
-    private static final String PATH = "regi";
+    private static final String PATH = "memberRegi";
     private static final String MEMBER_REQUEST_REGI_USER_NAME = "이름을 입력해 주세요 : ";
     private static final String MEMBER_REQUEST_REGI_USER_AGE = "나이를 입력해 주세요 : ";
     private static final String MEMBER_REQUEST_REGI_USER_GENDER = "성별을 입력해 주세요 (1 : 남자, 2 : 여자) : ";
-    private static final String GENDER_MALE = "1";
-    private static final String GENDER_FEMALE = "2";
-
 
     @Override
     public String process(Map<String, Object> model) {
@@ -37,14 +35,6 @@ public class MemberRegisterFunction implements IFMemberFunctionModel {
     }
 
     private Gender selectGender(String read) {
-        Gender gender = null;
-        if (read.equals(GENDER_MALE)) {
-            gender = Gender.MALE;
-        }
-
-        if (read.equals(GENDER_FEMALE)) {
-            gender = Gender.FEMALE;
-        }
-        return gender;
+        return Gender.getGender(read);
     }
 }

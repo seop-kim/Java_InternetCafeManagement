@@ -21,7 +21,7 @@ public class MemberValidator {
     }
 
     private void nameLenZero() {
-        if (member.getName().length() == 0) {
+        if (member.getName().length() == 0 || member.getName() == null) {
             throw new IllegalArgumentException("이름을 입력해주세요.");
         }
     }

@@ -12,7 +12,6 @@ import com.seop.cafe.view.member.MemberNameSearchView;
 import com.seop.cafe.view.member.MemberOneSearchView;
 import com.seop.cafe.view.member.MemberRegisterView;
 import com.seop.cafe.view.member.MemberSearchView;
-import com.seop.cafe.view.member.MemberUpdateView;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -36,7 +35,6 @@ public class ViewFactory {
         views.put("memberSearchNameMembers", new MemberNameSearchView());
         views.put("memberSearchMember", new MemberOneSearchView());
         views.put("memberDelete", new MemberDeleteView());
-        views.put("memberUpdateSelect", new MemberUpdateView());
     }
 
     private void initItem() {

@@ -11,8 +11,6 @@ public class MemberService {
     private final MemberRepository repository = MemberRepository.getInstance();
     private final MemberValidator validator = new MemberValidator();
 
-    private static final String MEMBER_VALIDATE_DELETE_EXCEPTION_MSG = "존재하지 않는 회원입니다.";
-
     public Member register(Member member) {
         validator.registerValidate(member);
         return repository.save(member);
@@ -31,15 +29,7 @@ public class MemberService {
     }
 
     public void delete(Long no) {
-        deleteValidate(no);
+        validator.deleteValidate(no);
         repository.delete(no);
-    }
-
-
-    private void deleteValidate(Long no) {
-        Member findMember = repository.findOne(no);
-        if (findMember == null) {
-            throw new IllegalArgumentException(MEMBER_VALIDATE_DELETE_EXCEPTION_MSG);
-        }
     }
 }

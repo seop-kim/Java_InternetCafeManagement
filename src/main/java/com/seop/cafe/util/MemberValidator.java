@@ -1,11 +1,14 @@
 package com.seop.cafe.util;
 
 import com.seop.cafe.domain.Member;
+import com.seop.cafe.repository.MemberRepository;
 
 public class MemberValidator {
     private static final int MEMBER_NAME_MAX_LENS = 5;
     private static final int MEMBER_AGE_MIN_VALUE = 3;
     private static final int MEMBER_AGE_MAX_VALUE = 200;
+    private static final String MEMBER_VALIDATE_DELETE_EXCEPTION_MSG = "존재하지 않는 회원입니다.";
+    private static final MemberRepository repository = MemberRepository.getInstance();
     private Member member;
 
     public void registerValidate(Member member) {
@@ -41,6 +44,13 @@ public class MemberValidator {
     private void genderValidate() {
         if (member.getGender() == null) {
             throw new IllegalArgumentException("성별을 입력해 주세요.");
+        }
+    }
+
+    public void deleteValidate(Long no) {
+        Member findMember = repository.findOne(no);
+        if (findMember == null) {
+            throw new IllegalArgumentException(MEMBER_VALIDATE_DELETE_EXCEPTION_MSG);
         }
     }
 }

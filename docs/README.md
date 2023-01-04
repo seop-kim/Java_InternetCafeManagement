@@ -15,7 +15,7 @@ pc방 아르바이트나 사장님과 친해지기만 한다면 때때로 뜻밖
 
 ## 구조도
 
-![structure](readmesorce/스크린샷 2023-01-04 오후 2.12.43.png)
+![structure](readmesorce/structure.png)
 
 ## 기능목록
 - [ ] 운영
@@ -58,7 +58,7 @@ _기능 프로세스는 시간상 일부 기능만 작성._
 
 **[회원 수정]**
 
-![memberUpdate](readmesorce/스크린샷 2023-01-04 오후 3.04.13.png)
+![memberUpdate](readmesorce/memberUpdate.png)
 
 ## history
 2023.01.02 :  

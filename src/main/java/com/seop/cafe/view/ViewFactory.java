@@ -2,7 +2,7 @@ package com.seop.cafe.view;
 
 import com.seop.cafe.view.common.EndView;
 import com.seop.cafe.view.item.ItemAddView;
-import com.seop.cafe.view.item.ItemCategorySearchView;
+import com.seop.cafe.view.item.ItemSearchCategoryView;
 import com.seop.cafe.view.item.ItemDeleteView;
 import com.seop.cafe.view.item.ItemNameSearchView;
 import com.seop.cafe.view.item.ItemSearchView;
@@ -12,6 +12,7 @@ import com.seop.cafe.view.member.MemberNameSearchView;
 import com.seop.cafe.view.member.MemberOneSearchView;
 import com.seop.cafe.view.member.MemberRegisterView;
 import com.seop.cafe.view.member.MemberSearchView;
+import com.seop.cafe.view.member.MemberUpdateView;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -35,6 +36,7 @@ public class ViewFactory {
         views.put("memberSearchNameMembers", new MemberNameSearchView());
         views.put("memberSearchMember", new MemberOneSearchView());
         views.put("memberDelete", new MemberDeleteView());
+        views.put("memberUpdateSelect", new MemberUpdateView());
     }
 
     private void initItem() {
@@ -43,7 +45,7 @@ public class ViewFactory {
         views.put("itemSearchName", new ItemNameSearchView());
         views.put("itemSearchItems", new ItemSearchView());
         views.put("itemUpdate", new ItemUpdateView());
-        views.put("itemCategorySearch", new ItemCategorySearchView());
+        views.put("itemCategorySearch", new ItemSearchCategoryView());
 
     }
 

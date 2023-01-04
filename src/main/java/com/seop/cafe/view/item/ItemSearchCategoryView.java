@@ -5,7 +5,7 @@ import com.seop.cafe.view.Viewable;
 import java.util.List;
 import java.util.Map;
 
-public class ItemCategorySearchView implements Viewable {
+public class ItemSearchCategoryView implements Viewable {
     @Override
     public void render(Map<String, Object> model) {
         List<Item> items = (List<Item>) model.get("items");

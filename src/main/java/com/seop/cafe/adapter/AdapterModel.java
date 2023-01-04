@@ -5,7 +5,7 @@ import com.seop.cafe.view.ViewModel;
 import java.util.HashMap;
 import java.util.Map;
 
-public class AdapterMap implements IAdapter {
+public class AdapterModel implements IAdapter {
     @Override
     public boolean isSupport(Object controller) {
         return controller instanceof IFunctionModel;

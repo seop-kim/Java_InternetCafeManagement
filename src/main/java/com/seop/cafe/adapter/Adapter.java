@@ -13,8 +13,8 @@ public class Adapter {
     }
 
     private Adapter() {
-        adapters.add(new AdapterMap());
-        adapters.add(new AdapterString());
+        adapters.add(new AdapterModel());
+        adapters.add(new AdapterPath());
     }
 
     public IAdapter findAdapter(Object controller) {

@@ -18,4 +18,11 @@ public class AdapterModel implements IAdapter {
         String viewPath = controllable.process(model);
         return new ViewModel(viewPath, model);
     }
+
+    @Override
+    public ViewModel process(Object controller, Map<String, Object> model) {
+        IFunctionModel controllable = (IFunctionModel) controller;
+        String viewPath = controllable.process(model);
+        return new ViewModel(viewPath, model);
+    }
 }

@@ -9,6 +9,8 @@ import com.seop.cafe.function.member.MemberNameSearchFunction;
 import com.seop.cafe.function.member.MemberOneSearchFunction;
 import com.seop.cafe.function.member.MemberRegisterFunction;
 import com.seop.cafe.function.member.MemberSearchFunction;
+import com.seop.cafe.function.member.MemberTestFormFunction;
+import com.seop.cafe.function.member.MemberTestFunction;
 import com.seop.cafe.view.common.InputView;
 import com.seop.cafe.view.ViewModel;
 import java.util.HashMap;
@@ -32,6 +34,8 @@ public class MemberController implements IMainControllable {
         controllers.put("4", new MemberOneSearchFunction());
         controllers.put("5", new MemberDeleteFunction());
         controllers.put(END, new EndFunction());
+        controllers.put("7", new MemberTestFormFunction());
+        controllers.put("member_test_use_model", new MemberTestFunction());
     }
 
 
@@ -42,14 +46,21 @@ public class MemberController implements IMainControllable {
         while (!select.equals(END)) {
             System.out.println(SELECT_MEMBER_MENU);
             select = InputView.read();
-            controller.service(select);
+            controller.mapping(select);
         }
     }
 
-    public void service(String path) {
+    public void mapping(String path) {
         Object controller = controllers.get(path);
         IAdapter adapter = adapters.findAdapter(controller);
         ViewModel viewModel = adapter.process(controller);
+        viewModel.render();
+    }
+
+    public static void mapping(String path, Map<String, Object> model) {
+        Object controller = controllers.get(path);
+        IAdapter adapter = adapters.findAdapter(controller);
+        ViewModel viewModel = adapter.process(controller, model);
         viewModel.render();
     }
 }

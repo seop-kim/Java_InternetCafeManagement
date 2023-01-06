@@ -7,11 +7,16 @@ import com.seop.cafe.view.item.ItemDeleteView;
 import com.seop.cafe.view.item.ItemNameSearchView;
 import com.seop.cafe.view.item.ItemSearchView;
 import com.seop.cafe.view.item.ItemUpdateView;
-import com.seop.cafe.view.member.MemberDeleteView;
-import com.seop.cafe.view.member.MemberNameSearchView;
-import com.seop.cafe.view.member.MemberOneSearchView;
-import com.seop.cafe.view.member.MemberRegisterView;
-import com.seop.cafe.view.member.MemberSearchView;
+import com.seop.cafe.view.member.delete.MemberDeleteView;
+import com.seop.cafe.view.member.find.MemberNameSearchView;
+import com.seop.cafe.view.member.regist.MemberRegisterView;
+import com.seop.cafe.view.member.find.MemberSearchView;
+import com.seop.cafe.view.member.update.MemberUpdateCompView;
+import com.seop.cafe.view.member.delete.MemberDeleteFormView;
+import com.seop.cafe.view.member.find.MemberNameSearchFormView;
+import com.seop.cafe.view.member.update.MemberUpdateFindFormView;
+import com.seop.cafe.view.member.update.MemberUpdateFindCompFormView;
+import com.seop.cafe.view.member.update.MemberUpdateForm;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -25,6 +30,7 @@ public class ViewFactory {
 
     private ViewFactory() {
         initMember();
+        initMemberForm();
         initItem();
         views.put("end", new EndView());
     }
@@ -32,9 +38,17 @@ public class ViewFactory {
     private void initMember() {
         views.put("memberRegi", new MemberRegisterView());
         views.put("memberSearchMembers", new MemberSearchView());
-        views.put("memberSearchNameMembers", new MemberNameSearchView());
-        views.put("memberSearchMember", new MemberOneSearchView());
-        views.put("memberDelete", new MemberDeleteView());
+        views.put("MEMBER_SEARCH_NAME_VIEW", new MemberNameSearchView());
+        views.put("MEMBER_DELETE_VIEW", new MemberDeleteView());
+    }
+
+    private void initMemberForm() {
+        views.put("MEMBER_DELETE_SELECT_FORM", new MemberDeleteFormView());
+        views.put("MEMBER_SEARCH_NAME_FORM", new MemberNameSearchFormView());
+        views.put("MEMBER_UPDATE_FIND_FORM", new MemberUpdateFindFormView());
+        views.put("MEMBER_UPDATE_FIND_COMP_FORM", new MemberUpdateFindCompFormView());
+        views.put("MEMBER_UPDATE_FORM", new MemberUpdateForm());
+        views.put("MEMBER_UPDATE_COMP_FORM", new MemberUpdateCompView());
     }
 
     private void initItem() {
@@ -44,7 +58,6 @@ public class ViewFactory {
         views.put("itemSearchItems", new ItemSearchView());
         views.put("itemUpdate", new ItemUpdateView());
         views.put("itemCategorySearch", new ItemSearchCategoryView());
-
     }
 
     public Viewable get(String viewPath) {

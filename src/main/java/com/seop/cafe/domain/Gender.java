@@ -1,8 +1,8 @@
 package com.seop.cafe.domain;
 
 public enum Gender {
-    MALE("1", "남성"),
-    FEMALE("2", "여성");
+    MALE("1", "남"),
+    FEMALE("2", "여");
 
     private final String no;
     private final String gender;
@@ -13,8 +13,8 @@ public enum Gender {
         this.gender = gender;
     }
 
-    public String getGender(Gender gender) {
-        return this.gender;
+    public static String getGender(Gender gender) {
+        return gender.gender;
     }
 
     public static Gender getGender(String no) {

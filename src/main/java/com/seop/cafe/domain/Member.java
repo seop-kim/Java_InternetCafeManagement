@@ -1,6 +1,8 @@
 package com.seop.cafe.domain;
 
+import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -20,13 +22,11 @@ public class Member {
 
     @Override
     public String toString() {
-        return "Member{" +
-                "no=" + no +
-                ", name='" + name + '\'' +
-                ", age=" + age +
-                ", regiDate=" + regiDate +
-                ", lastUseDate=" + lastUseDate +
-                ", gender=" + gender +
-                '}';
+        return "고유번호 : " + no +
+                "\t이름 : " + name +
+                "\t나이 : " + age +
+                "\t가입일 : " + regiDate.format(DateTimeFormatter.ISO_DATE) +
+                "\t최종로그인 : " + lastUseDate +
+                "\t성별 : " + Gender.getGender(gender);
     }
 }

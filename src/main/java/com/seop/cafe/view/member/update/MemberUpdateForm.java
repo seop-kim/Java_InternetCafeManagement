@@ -9,6 +9,7 @@ public class MemberUpdateForm extends ViewForm implements Viewable {
     @Override
     public void render(Map<String, Object> model) {
         ANSWER_MODEL = model;
+
         setup();
         super.print();
         super.read(InputView.read());

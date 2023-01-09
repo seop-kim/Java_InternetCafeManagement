@@ -11,9 +11,9 @@ public class MemberUpdateFindCompFormView extends ViewForm implements Viewable {
     public void render(Map<String, Object> model) {
         Member findMember = (Member) model.get("member");
 
+        setup();
         super.add("member", findMember);
         super.print(findMember);
-        setup();
         super.print();
         super.read(InputView.read());
         super.mapping();

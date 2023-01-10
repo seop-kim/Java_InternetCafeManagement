@@ -1,4 +1,4 @@
-package com.seop.cafe.function.product;
+package com.seop.cafe.function.product.update;
 
 import com.seop.cafe.controller.common.IFunctionModel;
 import java.util.Map;

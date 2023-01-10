@@ -1,4 +1,4 @@
-package com.seop.cafe.function.product;
+package com.seop.cafe.function.product.find;
 
 import com.seop.cafe.controller.common.IFunctionModel;
 import com.seop.cafe.domain.Product;

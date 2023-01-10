@@ -8,7 +8,5 @@ public interface IMainControllable {
 
     default void mapping(String path){}
 
-    default void mapping(String path, Map<String, Object> model) {
-
-    }
+    default void mapping(String path, Map<String, Object> model) {}
 }

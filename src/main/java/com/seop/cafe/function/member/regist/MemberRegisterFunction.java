@@ -9,32 +9,29 @@ import java.util.Map;
 
 public class MemberRegisterFunction implements IFunctionModel {
     private final MemberService service = new MemberService();
-    private static final String PATH = "memberRegi";
-    private static final String MEMBER_REQUEST_REGI_USER_NAME = "이름을 입력해 주세요 : ";
-    private static final String MEMBER_REQUEST_REGI_USER_AGE = "나이를 입력해 주세요 : ";
-    private static final String MEMBER_REQUEST_REGI_USER_GENDER = "성별을 입력해 주세요 (1 : 남자, 2 : 여자) : ";
+    private static final String PATH = "MEMBER_REGI_COMP";
 
     @Override
     public String process(Map<String, Object> model) {
-        Member member = createMember();
+        Member member = getMember(model);
         Member regiMember = service.register(member);
         model.put("member", regiMember);
         return PATH;
     }
 
-    private Member createMember() {
+    private Member getMember(Map<String, Object> model) {
         Member member = new Member();
-        System.out.print(MEMBER_REQUEST_REGI_USER_NAME);
-        member.setName(InputView.read());
-        System.out.print(MEMBER_REQUEST_REGI_USER_AGE);
-        member.setAge(Integer.parseInt(InputView.read()));
-        System.out.print(MEMBER_REQUEST_REGI_USER_GENDER);
-        Gender gender = selectGender(InputView.read());
-        member.setGender(gender);
-        return member;
-    }
 
-    private Gender selectGender(String read) {
-        return Gender.getGender(read);
+        String name = (String) model.get("NAME");
+        member.setName(name);
+
+        String age = (String) model.get("AGE");
+        member.setAge(Integer.parseInt(age));
+
+        String readGender = (String) model.get("GENDER");
+        Gender gender = Gender.getGender(readGender);
+        member.setGender(gender);
+
+        return member;
     }
 }

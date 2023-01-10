@@ -16,7 +16,7 @@ public abstract class ViewForm {
 
     protected ViewForm() {
         controllable.put("MEMBER", new MemberController());
-        controllable.put("ITEM", new ProductController());
+        controllable.put("PRODUCT", new ProductController());
     }
 
     protected final void print() {

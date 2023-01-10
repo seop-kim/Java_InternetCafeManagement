@@ -40,12 +40,10 @@ public class Product {
 
     @Override
     public String toString() {
-        return "Product{" +
-                "no=" + no +
-                ", name='" + name + '\'' +
-                ", category=" + category +
-                ", price=" + price +
-                ", stock=" + stock +
-                '}';
+        return "고유번호 : " + no +
+                "\t제품명 : " + name +
+                "\t카테고리 : " + category.getCategory() +
+                "\t가격 : " + price +
+                "\t재고 : " + stock;
     }
 }

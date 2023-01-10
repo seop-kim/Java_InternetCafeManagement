@@ -3,7 +3,7 @@ package com.seop.cafe.view;
 import com.seop.cafe.view.common.EndView;
 import com.seop.cafe.view.product.ProductAddView;
 import com.seop.cafe.view.product.ProductSearchCategoryView;
-import com.seop.cafe.view.product.ProductDeleteView;
+import com.seop.cafe.view.product.delete.ProductDeleteView;
 import com.seop.cafe.view.product.ProductNameSearchView;
 import com.seop.cafe.view.product.ProductSearchView;
 import com.seop.cafe.view.product.ProductUpdateView;
@@ -19,6 +19,7 @@ import com.seop.cafe.view.member.find.MemberNameSearchFormView;
 import com.seop.cafe.view.member.update.MemberUpdateFindFormView;
 import com.seop.cafe.view.member.update.MemberUpdateFindCompFormView;
 import com.seop.cafe.view.member.update.MemberUpdateForm;
+import com.seop.cafe.view.product.delete.ProductDeleteFormView;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -34,6 +35,7 @@ public class ViewFactory {
         initMember();
         initMemberForm();
         initItem();
+        initProductForm();
         views.put("END", new EndView());
     }
 
@@ -41,7 +43,7 @@ public class ViewFactory {
         views.put("MEMBER_SELECT_FORM", new MemberSelectForm());
         views.put("MEMBER_REGI_FORM", new MemberRegisterFormView());
         views.put("MEMBER_REGI_COMP", new MemberRegisterView());
-        views.put("memberSearchMembers", new MemberSearchView());
+        views.put("MEMBER_FIND_ALL_VIEW", new MemberSearchView());
         views.put("MEMBER_SEARCH_NAME_VIEW", new MemberNameSearchView());
         views.put("MEMBER_DELETE_VIEW", new MemberDeleteView());
 
@@ -58,11 +60,15 @@ public class ViewFactory {
 
     private void initItem() {
         views.put("itemAdd", new ProductAddView());
-        views.put("itemDelete", new ProductDeleteView());
+        views.put("PRODUCT_DELETE_VIEW", new ProductDeleteView());
         views.put("itemSearchName", new ProductNameSearchView());
         views.put("itemSearchItems", new ProductSearchView());
         views.put("itemUpdate", new ProductUpdateView());
         views.put("itemCategorySearch", new ProductSearchCategoryView());
+    }
+
+    private void initProductForm() {
+        views.put("PRODUCT_FIND_DELETE_FORM", new ProductDeleteFormView());
     }
 
     public Viewable get(String viewPath) {

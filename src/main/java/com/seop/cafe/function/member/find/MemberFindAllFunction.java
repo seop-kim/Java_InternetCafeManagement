@@ -8,7 +8,7 @@ import java.util.Map;
 
 public class MemberFindAllFunction implements IFunctionModel {
     private final MemberService service = new MemberService();
-    private static final String PATH = "memberSearchMembers";
+    private static final String PATH = "MEMBER_FIND_ALL_VIEW";
 
     @Override
     public String process(Map<String, Object> model) {

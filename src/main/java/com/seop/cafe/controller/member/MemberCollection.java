@@ -1,6 +1,8 @@
 package com.seop.cafe.controller.member;
 
 import com.seop.cafe.controller.common.EndFunction;
+import com.seop.cafe.function.member.MemberSelectForm;
+//import com.seop.cafe.function.member.MemberSelectFunction;
 import com.seop.cafe.function.member.delete.MemberDeleteForm;
 import com.seop.cafe.function.member.delete.MemberDeleteFunction;
 import com.seop.cafe.function.member.find.MemberFindAllFunction;
@@ -14,6 +16,8 @@ import com.seop.cafe.function.member.update.MemberUpdateFunction;
 import com.seop.cafe.function.member.update.MemberUpdateSelectHeadForm;
 
 public enum MemberCollection {
+    MEMBER_SELECT_FORM("MEMBER_SELECT_FORM", new MemberSelectForm()),
+//    MEMBER_SELECT_FUNCTION("MEMBER_SELECT_FUNCTION", new MemberSelectFunction()),
     MEMBER_REGISTER_FORM("1", new MemberRegisterForm()),
     MEMBER_FIND_ALL_FUNCTION("2", new MemberFindAllFunction()),
     MEMBER_FIND_NAME_FORM("3", new MemberNameFindForm()),

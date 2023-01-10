@@ -35,6 +35,10 @@ public abstract class ViewForm {
         ANSWER_MODEL.put(key, value);
     }
 
+    protected final void mapping(String key) {
+        IMainControllable controller = (IMainControllable) controllable.get(CONTROLLER);
+        controller.mapping(key);
+    }
     protected final void mapping() {
         IMainControllable controller = (IMainControllable) controllable.get(CONTROLLER);
         controller.mapping(CONTROLLER_PATH, ANSWER_MODEL);

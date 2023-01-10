@@ -6,6 +6,8 @@ import java.util.Map;
 public interface IMainControllable {
     void process();
 
+    default void mapping(String path){}
+
     default void mapping(String path, Map<String, Object> model) {
 
     }

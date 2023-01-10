@@ -4,7 +4,7 @@ import com.seop.cafe.view.common.EndView;
 import com.seop.cafe.view.product.ProductAddView;
 import com.seop.cafe.view.product.ProductSearchCategoryView;
 import com.seop.cafe.view.product.delete.ProductDeleteView;
-import com.seop.cafe.view.product.ProductNameSearchView;
+import com.seop.cafe.view.product.find.ProductFindNameView;
 import com.seop.cafe.view.product.ProductSearchView;
 import com.seop.cafe.view.product.ProductUpdateView;
 import com.seop.cafe.view.member.MemberSelectForm;
@@ -20,6 +20,7 @@ import com.seop.cafe.view.member.update.MemberUpdateFindFormView;
 import com.seop.cafe.view.member.update.MemberUpdateFindCompFormView;
 import com.seop.cafe.view.member.update.MemberUpdateForm;
 import com.seop.cafe.view.product.delete.ProductDeleteFormView;
+import com.seop.cafe.view.product.find.ProductFindNameFormView;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -61,7 +62,7 @@ public class ViewFactory {
     private void initItem() {
         views.put("itemAdd", new ProductAddView());
         views.put("PRODUCT_DELETE_VIEW", new ProductDeleteView());
-        views.put("itemSearchName", new ProductNameSearchView());
+        views.put("PRODUCT_FIND_NAME_VIEW", new ProductFindNameView());
         views.put("itemSearchItems", new ProductSearchView());
         views.put("itemUpdate", new ProductUpdateView());
         views.put("itemCategorySearch", new ProductSearchCategoryView());
@@ -69,6 +70,7 @@ public class ViewFactory {
 
     private void initProductForm() {
         views.put("PRODUCT_FIND_DELETE_FORM", new ProductDeleteFormView());
+        views.put("PRODUCT_FIND_NAME_FORM", new ProductFindNameFormView());
     }
 
     public Viewable get(String viewPath) {

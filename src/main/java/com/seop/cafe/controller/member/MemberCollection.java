@@ -6,7 +6,7 @@ import com.seop.cafe.function.member.delete.MemberDeleteForm;
 import com.seop.cafe.function.member.delete.MemberDeleteFunction;
 import com.seop.cafe.function.member.find.MemberFindAllFunction;
 import com.seop.cafe.function.member.find.MemberFindNameFunction;
-import com.seop.cafe.function.member.find.MemberNameFindForm;
+import com.seop.cafe.function.member.find.MemberFindNameForm;
 import com.seop.cafe.function.member.regist.MemberRegisterForm;
 import com.seop.cafe.function.member.regist.MemberRegisterFunction;
 import com.seop.cafe.function.member.update.MemberUpdateFindCompForm;
@@ -17,7 +17,7 @@ import com.seop.cafe.function.member.update.MemberUpdateSelectHeadForm;
 public enum MemberCollection {
     MEMBER_SELECT_REGISTER("1", new MemberRegisterForm()),
     MEMBER_SELECT_FIND_ALL("2", new MemberFindAllFunction()),
-    MEMBER_SELECT_FIND_NAME("3", new MemberNameFindForm()),
+    MEMBER_SELECT_FIND_NAME("3", new MemberFindNameForm()),
     MEMBER_SELECT_UPDATE("4", new MemberUpdateFindForm()),
     MEMBER_SELECT_DELETE("5", new MemberDeleteForm()),
     MEMBER_SELECT_BACK("0", new EndFunction()),

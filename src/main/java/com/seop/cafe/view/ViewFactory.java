@@ -1,12 +1,12 @@
 package com.seop.cafe.view;
 
 import com.seop.cafe.view.common.EndView;
-import com.seop.cafe.view.item.ItemAddView;
-import com.seop.cafe.view.item.ItemSearchCategoryView;
-import com.seop.cafe.view.item.ItemDeleteView;
-import com.seop.cafe.view.item.ItemNameSearchView;
-import com.seop.cafe.view.item.ItemSearchView;
-import com.seop.cafe.view.item.ItemUpdateView;
+import com.seop.cafe.view.product.ProductAddView;
+import com.seop.cafe.view.product.ProductSearchCategoryView;
+import com.seop.cafe.view.product.ProductDeleteView;
+import com.seop.cafe.view.product.ProductNameSearchView;
+import com.seop.cafe.view.product.ProductSearchView;
+import com.seop.cafe.view.product.ProductUpdateView;
 import com.seop.cafe.view.member.MemberSelectForm;
 import com.seop.cafe.view.member.delete.MemberDeleteView;
 import com.seop.cafe.view.member.find.MemberNameSearchView;
@@ -57,12 +57,12 @@ public class ViewFactory {
     }
 
     private void initItem() {
-        views.put("itemAdd", new ItemAddView());
-        views.put("itemDelete", new ItemDeleteView());
-        views.put("itemSearchName", new ItemNameSearchView());
-        views.put("itemSearchItems", new ItemSearchView());
-        views.put("itemUpdate", new ItemUpdateView());
-        views.put("itemCategorySearch", new ItemSearchCategoryView());
+        views.put("itemAdd", new ProductAddView());
+        views.put("itemDelete", new ProductDeleteView());
+        views.put("itemSearchName", new ProductNameSearchView());
+        views.put("itemSearchItems", new ProductSearchView());
+        views.put("itemUpdate", new ProductUpdateView());
+        views.put("itemCategorySearch", new ProductSearchCategoryView());
     }
 
     public Viewable get(String viewPath) {

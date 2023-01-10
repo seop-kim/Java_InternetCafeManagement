@@ -1,9 +1,9 @@
-package com.seop.cafe.function.item;
+package com.seop.cafe.function.product;
 
 import com.seop.cafe.controller.common.IFunctionModel;
 import java.util.Map;
 
-public class ItemUpdateFunction implements IFunctionModel {
+public class ProductUpdateFunction implements IFunctionModel {
     private static final String PATH = "itemUpdate";
 
     @Override

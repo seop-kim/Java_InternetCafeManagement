@@ -5,10 +5,10 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class Item {
+public class Product {
     Long no;
     String name;
-    ItemCategory category;
+    ProductCategory category;
     int price;
     int stock;
 
@@ -40,7 +40,7 @@ public class Item {
 
     @Override
     public String toString() {
-        return "Item{" +
+        return "Product{" +
                 "no=" + no +
                 ", name='" + name + '\'' +
                 ", category=" + category +

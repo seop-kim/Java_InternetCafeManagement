@@ -1,14 +1,14 @@
-package com.seop.cafe.function.item;
+package com.seop.cafe.function.product;
 
 import com.seop.cafe.controller.common.IFunctionModel;
-import com.seop.cafe.domain.Item;
-import com.seop.cafe.service.ItemService;
+import com.seop.cafe.domain.Product;
+import com.seop.cafe.service.ProductService;
 import com.seop.cafe.view.common.InputView;
 import java.util.List;
 import java.util.Map;
 
-public class ItemNameSearchFunction implements IFunctionModel {
-    private final ItemService service = new ItemService();
+public class ProductNameSearchFunction implements IFunctionModel {
+    private final ProductService service = new ProductService();
     private static final String PATH = "itemSearchName";
     private static final String ITEM_REQUEST_SEARCH_ITEM_NAME = "제품명을 입력해 주세요 : ";
 
@@ -16,7 +16,7 @@ public class ItemNameSearchFunction implements IFunctionModel {
     public String process(Map<String, Object> model) {
         System.out.print(ITEM_REQUEST_SEARCH_ITEM_NAME);
         String name = InputView.read();
-        List<Item> findItems = service.findName(name);
+        List<Product> findItems = service.findName(name);
         model.put("items", findItems);
         return PATH;
     }

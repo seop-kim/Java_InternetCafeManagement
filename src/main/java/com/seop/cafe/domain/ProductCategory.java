@@ -1,6 +1,6 @@
 package com.seop.cafe.domain;
 
-public enum ItemCategory {
+public enum ProductCategory {
     SNACK("1", "과자"),
     DRINK("2", "음료"),
     RAMEN("3", "라면");
@@ -9,7 +9,7 @@ public enum ItemCategory {
 
     private final String category;
 
-    ItemCategory(String no, String category) {
+    ProductCategory(String no, String category) {
         this.no = no;
         this.category = category;
     }
@@ -18,8 +18,8 @@ public enum ItemCategory {
         return this.category;
     }
 
-    public static ItemCategory getCategory(String no) {
-        for (ItemCategory findCate : ItemCategory.values()) {
+    public static ProductCategory getCategory(String no) {
+        for (ProductCategory findCate : ProductCategory.values()) {
             if (findCate.no.equals(no)) {
                 return findCate;
             }

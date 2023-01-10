@@ -1,7 +1,7 @@
 package com.seop.cafe.view.common;
 
 import com.seop.cafe.controller.IMainControllable;
-import com.seop.cafe.controller.item.ItemController;
+import com.seop.cafe.controller.product.ProductController;
 import com.seop.cafe.controller.member.MemberController;
 import java.util.HashMap;
 import java.util.Map;
@@ -16,7 +16,7 @@ public abstract class ViewForm {
 
     protected ViewForm() {
         controllable.put("MEMBER", new MemberController());
-        controllable.put("ITEM", new ItemController());
+        controllable.put("ITEM", new ProductController());
     }
 
     protected final void print() {

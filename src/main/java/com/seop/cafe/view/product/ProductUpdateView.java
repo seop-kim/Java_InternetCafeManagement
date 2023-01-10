@@ -1,9 +1,9 @@
-package com.seop.cafe.view.item;
+package com.seop.cafe.view.product;
 
 import com.seop.cafe.view.Viewable;
 import java.util.Map;
 
-public class ItemUpdateView implements Viewable {
+public class ProductUpdateView implements Viewable {
     private static final String ITEM_NO_IMPL_FUNCTION = "미구현 기능입니다.";
 
     @Override

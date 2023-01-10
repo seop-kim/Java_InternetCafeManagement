@@ -1,6 +1,6 @@
 package com.seop.cafe.controller;
 
-import com.seop.cafe.controller.item.ItemController;
+import com.seop.cafe.controller.product.ProductController;
 import com.seop.cafe.controller.member.MemberController;
 import com.seop.cafe.view.common.InputView;
 import java.util.HashMap;
@@ -12,7 +12,7 @@ public class MainController {
 
     public MainController() {
         controllers.put("1", new MemberController());
-        controllers.put("2", new ItemController());
+        controllers.put("2", new ProductController());
     }
 
     public void run() {

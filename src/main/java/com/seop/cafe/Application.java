@@ -2,7 +2,7 @@ package com.seop.cafe;
 
 
 import com.seop.cafe.controller.MainController;
-import com.seop.cafe.init.ItemTestData;
+import com.seop.cafe.init.ProductTestData;
 import com.seop.cafe.init.MemberTestData;
 
 public class Application {
@@ -18,6 +18,6 @@ public class Application {
 
     private static void init() {
         MemberTestData.init();
-        ItemTestData.init();
+        ProductTestData.init();
     }
 }

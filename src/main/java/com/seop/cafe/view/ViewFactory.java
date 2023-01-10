@@ -9,6 +9,7 @@ import com.seop.cafe.view.item.ItemSearchView;
 import com.seop.cafe.view.item.ItemUpdateView;
 import com.seop.cafe.view.member.delete.MemberDeleteView;
 import com.seop.cafe.view.member.find.MemberNameSearchView;
+import com.seop.cafe.view.member.regist.MemberRegisterFormView;
 import com.seop.cafe.view.member.regist.MemberRegisterView;
 import com.seop.cafe.view.member.find.MemberSearchView;
 import com.seop.cafe.view.member.update.MemberUpdateCompView;
@@ -32,14 +33,16 @@ public class ViewFactory {
         initMember();
         initMemberForm();
         initItem();
-        views.put("end", new EndView());
+        views.put("END", new EndView());
     }
 
     private void initMember() {
-        views.put("memberRegi", new MemberRegisterView());
+        views.put("MEMBER_REGI_FORM", new MemberRegisterFormView());
+        views.put("MEMBER_REGI_COMP", new MemberRegisterView());
         views.put("memberSearchMembers", new MemberSearchView());
         views.put("MEMBER_SEARCH_NAME_VIEW", new MemberNameSearchView());
         views.put("MEMBER_DELETE_VIEW", new MemberDeleteView());
+
     }
 
     private void initMemberForm() {

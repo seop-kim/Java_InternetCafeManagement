@@ -24,7 +24,7 @@ public abstract class ViewForm {
     }
 
     protected final void print(Object msg) {
-        System.out.println(msg);
+        System.out.print(msg);
     }
 
     protected final void read(String read) {
